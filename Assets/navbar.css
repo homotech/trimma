@@ -1,0 +1,222 @@
+:root {
+  --PRIMARY_COLOR: #bb423f;
+  --SECONDARY_COLOR: rgba(255, 255, 255, 0.2);
+}
+nav {
+  display: flex;
+  width: 100%;
+  height: 60px;
+}
+nav > ul {
+  display: flex;
+}
+nav > ul > li > a {
+  text-transform: capitalize;
+  font-weight: 400;
+  color: #fff;
+}
+
+a.homenav,
+a.signupnav,
+a.loginnav,
+a.how_it_worksnav,
+a.contactusnav {
+  background-color: #fff;
+  color: var(--PRIMARY_COLOR) !important;
+  border-radius: 10px;
+}
+nav .brand-bar {
+  display: flex;
+}
+nav > .brand-bar .brand {
+  color: #fff;
+}
+#toggle {
+  display: none;
+}
+nav > .brand-bar > label:hover {
+  background-color: #fff;
+  color: var(--PRIMARY_COLOR);
+}
+nav > .brand-bar > label {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: #fff;
+}
+#toggle:checked + ul {
+  left: 0;
+}
+@media only screen and (max-width: 640px) {
+  nav {
+    flex-direction: column;
+  }
+  nav > .brand-bar > .brand {
+    font-size: 30px;
+    padding: 10px;
+  }
+  nav > .brand-bar > p,
+  nav > .brand-bar > label {
+    font-size: 25px;
+  }
+  nav > .brand-bar > label {
+    flex-basis: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+  }
+  nav .brand-bar > p:nth-child(1) {
+    flex: 8;
+  }
+  nav > ul {
+    position: fixed;
+    top: 60px;
+    height: 0;
+    height: 100vh;
+    flex-direction: column;
+    background-color: var(--PRIMARY_COLOR);
+    left: -100%;
+    z-index: 15;
+    width: 100%;
+    padding: 10px;
+    transition: 0.3s all;
+  }
+  nav ul li {
+    margin: 3px 0;
+  }
+
+  nav > ul > li > a {
+    font-size: 1.2rem;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    display: block;
+  }
+  nav > ul > li > a:hover {
+    background-color: var(--SECONDARY_COLOR);
+    color: #fff;
+    transition: 0.3s all;
+    border-radius: 10px;
+  }
+}
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
+  nav {
+    flex-direction: column;
+  }
+  nav > .brand-bar > .brand {
+    font-size: 30px;
+    padding: 10px;
+  }
+  nav > .brand-bar > p,
+  nav > .brand-bar > label {
+    font-size: 25px;
+  }
+  nav > .brand-bar > label {
+    flex-basis: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+  }
+  nav .brand-bar > p:nth-child(1) {
+    flex: 8;
+  }
+  nav > ul {
+    position: fixed;
+    top: 60px;
+    height: 0;
+    height: 10vh;
+    flex-direction: row;
+    background-color: var(--PRIMARY_COLOR);
+    left: -100%;
+    z-index: 15;
+    width: 100%;
+    padding: 10px;
+    transition: 0.3s all;
+  }
+  nav ul li {
+    flex: 1;
+    margin: 3px 0;
+  }
+
+  nav > ul > li > a {
+    font-size: 1.2rem;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    display: block;
+  }
+  nav > ul > li > a:hover {
+    background-color: var(--SECONDARY_COLOR);
+    color: #fff;
+    transition: 0.3s all;
+    border-radius: 10px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  nav {
+    flex-direction: row;
+  }
+  nav > .brand-bar {
+    flex: 2;
+  }
+  nav > .brand-bar > .brand {
+    font-size: 30px;
+    color: #fff;
+    padding: 10px;
+  }
+  nav > .brand-bar > p {
+    font-size: 25px;
+  }
+  nav .brand-bar > p:nth-child(1) {
+    flex: 1;
+  }
+  nav > .brand-bar > label {
+    display: none;
+  }
+  nav > ul {
+    flex-direction: row;
+    background-color: transparent;
+    transition: 0.3s all;
+    flex: 2;
+  }
+  nav > ul > li {
+    margin: 10px 5px;
+    width: 100%;
+  }
+  nav > ul > li a {
+    font-size: 0.9rem;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    /* display: flex; */
+    text-align: center;
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  nav > ul > li > a::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(17, 16, 16, 0.2);
+    border-radius: 10px;
+    transition: 0.5s all;
+  }
+  nav > ul > li > a:hover::before {
+    display: block;
+    width: 100%;
+    color: #fff;
+  }
+}

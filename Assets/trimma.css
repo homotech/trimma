@@ -1,0 +1,273 @@
+:root {
+  --box_shadow: -3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.text {
+  text-align: right;
+  right: 0;
+  margin-right: 10px;
+  position: absolute;
+  bottom: 10px;
+  z-index: 10;
+}
+.text > h3 {
+  color: #fff;
+}
+.text > p {
+  color: rgb(248, 120, 0);
+}
+.text > a {
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  line-height: 50px;
+}
+.gray {
+  width: 120%;
+  height: 150%;
+  background-image: linear-gradient(
+    60deg,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.8)
+  );
+  position: absolute;
+  transform: rotate(12deg);
+}
+.waves {
+  position: relative;
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./images/employedman.jpeg") !important;
+  overflow: hidden;
+}
+.card_tiles {
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.card_tiles > h2,
+.our_team > .header > h2 {
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.card_tiles > h2::after,
+.our_team > .header > h2::after {
+  content: "";
+  width: 120px;
+  height: 3px;
+  background-color: #bb423f;
+  position: absolute;
+  top: 36px;
+  left: 10px;
+}
+.cards-wrapper {
+  display: flex;
+  width: 100%;
+}
+.cards-wrapper > .cards > div.image {
+  flex: 3;
+}
+.cards-wrapper > .cards > div.card_texts {
+  flex: 1;
+}
+.card_tiles .cards {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  height: auto;
+  box-shadow: var(--box_shadow);
+  margin-top: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card_tiles > .cards-wrapper > .cards > .image {
+  padding: 10px;
+}
+.card_tiles > .cards-wrapper > .cards > .image > img {
+  width: 100%;
+}
+.card_tiles > .cards-wrapper > .cards > .card_texts {
+  background-image: linear-gradient(99deg, #da774e, #bb423f);
+  padding: 10px;
+  text-align: center;
+}
+.card_tiles > .cards-wrapper > .cards > .card_texts > h2 {
+  color: #fff;
+}
+.card_tiles > .cards-wrapper > .cards > .card_texts > p {
+  color: #ffffff;
+}
+/* STYLING FOR OUR TEAM STARTS HERE*/
+.our_team {
+  display: flex;
+  background-color: rgb(221, 221, 221);
+  flex-direction: column;
+}
+.our_team_cards_wrapper {
+  display: flex;
+}
+.our_team > .our_team_cards_wrapper > .our_team_cards {
+  display: flex;
+  margin: 10px auto;
+  box-shadow: var(--box_shadow);
+  background-color: #fff;
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.our_team > .our_team_cards_wrapper > .our_team_cards > div.avatar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.our_team > .our_team_cards_wrapper > .our_team_cards > .avatar > p {
+  background-color: #d1d1d1;
+  /* padding: 20px; */
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 20px;
+  color: #444;
+}
+.our_team > .our_team_cards_wrapper > .our_team_cards > div.profile {
+  flex: 3;
+}
+@media only screen and (max-width: 640px) {
+  .gray {
+    top: -20px;
+    left: 50%;
+    z-index: 0;
+  }
+  .text {
+    width: 200px;
+    height: auto;
+  }
+  .text > h3 {
+    font-size: 1.2rem;
+  }
+  .text > p {
+    font-size: 0.8rem;
+  }
+  .waves {
+    height: 350px;
+  }
+  .card_tiles {
+    flex-direction: column;
+  }
+  .cards-wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+  .cards-wrapper > .cards {
+    width: 75%;
+  }
+
+  .our_team_cards_wrapper {
+    flex-direction: column;
+  }
+}
+/* Below is the styling for ipads and devices greater than 640px*/
+@media only screen and (min-width: 640px) and (max-width: 1023px) {
+  .gray {
+    top: 0px;
+    left: 410px;
+  }
+  .text {
+    width: 250px;
+    z-index: 10;
+    right: 10px;
+  }
+  .text > h3 {
+    font-size: 2rem;
+  }
+  .text > p {
+    font-size: 1.2rem;
+  }
+  .waves {
+    height: 400px;
+  }
+  .cards-wrapper {
+    justify-content: space-around;
+    padding: 10px;
+  }
+  .cards-wrapper > .cards {
+    width: 30%;
+    display: flex;
+  }
+
+  .our_team_cards_wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .our_team_cards_wrapper > .our_team_cards {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .gray {
+    top: 0px;
+    left: 50%;
+  }
+  .text {
+    width: 350px;
+    right: 10px;
+  }
+  .text > h3 {
+    font-size: 3rem;
+  }
+  .text > p {
+    font-size: 1.2rem;
+  }
+  .text > a {
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 30px;
+    line-height: 90px;
+  }
+  .waves {
+    height: 450px;
+  }
+  .waves svg {
+    position: relative;
+    margin-top: 61%;
+    z-index: 12;
+  }
+  .cards-wrapper {
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .card_tiles {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+  }
+  .cards-wrapper > .cards {
+    width: 30%;
+    display: flex;
+  }
+
+  .our_team_cards_wrapper {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .our_team_cards_wrapper > .our_team_cards {
+    width: 40%;
+  }
+}

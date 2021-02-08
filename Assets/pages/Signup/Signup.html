@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./Signup.css" />
+    <link rel="stylesheet" href="../../navbar.css" />
+    <link rel="stylesheet" href="../../overall.css" />
+
+    <link
+      rel="stylesheet"
+      href="../../fontawesome-free-5.15.1-web/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../fontawesome-free-5.15.1-web/css/brands.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../fontawesome-free-5.15.1-web/css/fontawesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../fontawesome-free-5.15.1-web/css/regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../fontawesome-free-5.15.1-web/css/solid.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="brand-bar">
+        <p class="brand">Trimma</p>
+        <label for="toggle" id="togglenavbar"
+          ><i class="fas fa-bars"></i
+        ></label>
+      </div>
+      <input type="checkbox" name="toggle" id="toggle" />
+      <ul id="menu">
+        <li id="home">
+          <a href="../../../index.html">
+            <i class="fas fa-home"> </i>&nbsp;Home
+          </a>
+        </li>
+        <li>
+          <a id="signup" href="./Signup.html">
+            <i class="fas fa-user-plus"> </i>&nbsp;Register
+          </a>
+        </li>
+        <li>
+          <a href="../Signin/Signin.html">
+            <i class="fas fa-user"> </i>&nbsp;Log in</a
+          >
+        </li>
+
+        <li>
+          <a href="../Howitworks/hiw.html">
+            <i class="fas fa-info"> </i>&nbsp;Faq</a
+          >
+        </li>
+
+        <li>
+          <a href="../Contact us/contactus.html"
+            ><i class="fas fa-phone"> </i>&nbsp;Contact us</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="main">
+      <div class="welcome">
+        <img src="../../images/register.png" alt="relaxation" />
+        <p>The best way to get your work done the fastest.</p>
+        <p><span>Welcome to </span><span>trimma</span></p>
+        <div class="signin">
+          <p>click here if you have an account</p>
+          <button>Sign in</button>
+        </div>
+      </div>
+      <div class="form-placing">
+        <div class="choice">
+          <button id="ChoiceEmployer">Employee</button>
+          <button id="ChoiceEmployee" class="button-notactive">Employer</button>
+        </div>
+        <div id="response"></div>
+        <form id="employer" class="" enctype="multipart/form-data">
+          <div class="type">
+            <p>For Employee</p>
+          </div>
+          <div>
+            <label for="Full name">What's your name?</label>
+            <p class="help info"></p>
+            <input
+              type="text"
+              name="Fname"
+              placeholder="Full name"
+              id="fnames"
+            />
+          </div>
+          <div>
+            <label for="email">What's your email address?</label>
+            <p class="help info"></p>
+            <input
+              type="email"
+              placeholder="name@domain.com"
+              name="email"
+              id="emailE"
+            />
+          </div>
+          <div>
+            <label for="address">Where do you stay?</label>
+            <p class="help info"></p>
+            <input
+              type="text"
+              name="address"
+              placeholder="Address"
+              id="addressE"
+            />
+          </div>
+          <div>
+            <label for="bankname">What's your company's name?</label>
+            <p class="help info"></p>
+            <input
+              type="text"
+              name="companysname"
+              placeholder="Company's name"
+              id="companysname"
+            />
+          </div>
+          <div>
+            <label for="age">How old are you?</label>
+            <p class="help info"></p>
+            <select name="age" id="age">
+              <option value=""></option>
+              <option value="18yrs">18yrs</option>
+              <option value="19yrs">19yrs</option>
+              <option value="20yrs">20yrs</option>
+              <option value="21yrs">21yrs</option>
+              <option value="22yrs">22yrs</option>
+              <option value="23yrs">23yrs</option>
+              <option value="24yrs">24yrs</option>
+              <option value="25yrs">25yrs</option>
+            </select>
+          </div>
+          <div>
+            <label for="need"> What service do you need?</label>
+            <p class="help info"></p>
+            <select name="work" id="work">
+              <option value=""></option>
+              <option value="Vector Art">Vector Art</option>
+              <option value="Frontend Developer">Frontend Developer</option>
+              <option value="Backend Developer">Backend Developer</option>
+              <option value="Full stack Developer">Full stack Developer</option>
+              <option value="Graphics Designer">Graphics Designer</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="password">choose a password</label>
+            <p class="help password"></p>
+            <input type="password" name="password" id="passwordE" />
+            <p></p>
+          </div>
+          <div>
+            <label for="password">Retype the password</label>
+            <p class="helppassmatch"></p>
+            <input type="password" name="Cpassword" id="CpasswordE" />
+          </div>
+          <div class="terms">
+            <input type="checkbox" id="check" />
+            <p>I have read the terms and agreement and agreed with it.</p>
+          </div>
+          <div>
+            <button type="button" onclick="regEmployee()">Submit</button>
+          </div>
+        </form>
+        <!--
+            
+            Code below is for the form for organizations going to employ
+        
+    
+        -->
+        <form id="employee" class="hide">
+          <div class="type">
+            <p>For Employer</p>
+          </div>
+          <div>
+            <label for="Full name">What's your Company's name?</label>
+            <p class="help info"></p>
+            <input
+              type="text"
+              name="cname"
+              placeholder="Company's name"
+              id="cnames"
+            />
+          </div>
+          <div>
+            <label for="email">What's it's email address?</label>
+            <p class="help info"></p>
+            <input
+              type="email"
+              placeholder="name@domain.com"
+              name="email"
+              id="email"
+            />
+          </div>
+          <div>
+            <label for="address">Where is the company located?</label>
+            <p class="help info"></p>
+            <input
+              type="text"
+              name="address"
+              placeholder="Address"
+              id="address"
+            />
+          </div>
+          <div>
+            <label for="password">choose a password</label>
+            <p class="help password"></p>
+            <input type="password" name="password" id="password" />
+            <p></p>
+          </div>
+          <div>
+            <label for="password">Retype the password</label>
+            <p class="help passmatch"></p>
+            <input type="password" name="Cpassword" id="Cpassword" />
+          </div>
+          <div class="terms">
+            <input type="checkbox" />
+            <p>I have read the terms and agreement and agreed with it.</p>
+          </div>
+          <div>
+            <button type="button" onclick="regEmployer()">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="../../jquery.min.js"></script>
+    <script src="./signup.js"></script>
+  </body>
+</html>

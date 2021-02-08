@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./contactus.css" />
+    <link rel="stylesheet" href="../../navbar.css" />
+    <link rel="stylesheet" href="../../overall.css" />
+
+    <link
+      rel="stylesheet"
+      href="../../fontawesome-free-5.15.1-web/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../fontawesome-free-5.15.1-web/css/brands.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../fontawesome-free-5.15.1-web/css/fontawesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../fontawesome-free-5.15.1-web/css/regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../fontawesome-free-5.15.1-web/css/solid.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="brand-bar">
+        <p class="brand">Trimma</p>
+        <label for="toggle" id="togglenavbar"
+          ><i class="fas fa-bars"></i
+        ></label>
+      </div>
+      <input type="checkbox" name="toggle" id="toggle" />
+      <ul id="menu">
+        <li id="home">
+          <a href="../../../index.html">
+            <i class="fas fa-home"> </i>&nbsp;Home
+          </a>
+        </li>
+        <li>
+          <a href="../Signup/Signup.html">
+            <i class="fas fa-user-plus"> </i>&nbsp;Register
+          </a>
+        </li>
+        <li>
+          <a href="../Signin/Signin.html">
+            <i class="fas fa-user"> </i>&nbsp;Log in</a
+          >
+        </li>
+
+        <li>
+          <a href="../Howitworks/hiw.html">
+            <i class="fas fa-info"> </i>&nbsp;Faq</a
+          >
+        </li>
+
+        <li>
+          <a id="contactus" href="./contactus.html"
+            ><i class="fas fa-phone"> </i>&nbsp;Contact us</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div class="contactus">
+        <div class="contactus-details">
+          <div class="brand">
+            <h1>Trimma</h1>
+            <p>Address: <span> 245, New Nyanya, Nasarawa State</span></p>
+          </div>
+          <div class="particulars">
+            <h2>Contact us <i class="fas fa-envelope"></i></h2>
+            <div>
+              <h3>Email Address <i class="fas fa-email"></i></h3>
+              <p>trimma@gmail.com</p>
+            </div>
+            <div>
+              <h3>Hotlines <i class="fas fa-phone"></i></h3>
+              <a href="tel:09020004355">+2349020004355</a>
+              <a href="tel:09020004356">+2349020004356</a>
+              <a href="tel:09020004357">+2349020004357</a>
+            </div>
+          </div>
+          <div class="image">
+            <img src="../../images/contactus1.svg" />
+            <p>24/7 Service</p>
+          </div>
+        </div>
+        <div class="contactus-wrap">
+          <div class="header">
+            <div class="avatar">
+              <i class="fas fa-robot"></i>
+            </div>
+            <div class="avatar-name">
+              <p class="name">Trimma-bot</p>
+              <p class="last-seen">online</p>
+            </div>
+          </div>
+          <div class="message-wrap">
+            <div class="bot-msg">
+              <i class="fas fa-check"></i>
+              <p class="bot">
+                Hi!, I am Trimma-bot, What's your name ?, and How can i help
+                you?
+              </p>
+            </div>
+          </div>
+          <form>
+            <div class="field">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder=" Send message"
+              />
+            </div>
+            <div class="button"><button>Send</button></div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="./contactus.js"></script>
+  </body>
+</html>

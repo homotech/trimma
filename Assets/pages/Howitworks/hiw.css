@@ -1,0 +1,22 @@
+.question {
+  width: 40%;
+  margin: 0 auto;
+}
+.question > .check-answer > .answer {
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s all;
+}
+input {
+  display: none;
+}
+#checkbox1:checked + .answer,
+#checkbox2:checked + .answer,
+#checkbox3:checked + .answer,
+#checkbox4:checked + .answer,
+#checkbox5:checked + .answer,
+#checkbox6:checked + .answer {
+  height: 100%;
+  transition: 0.3s all;
+  /* overflow: */
+}

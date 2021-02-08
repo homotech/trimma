@@ -1,0 +1,182 @@
+.main {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.main > .welcome {
+  margin: 0 auto;
+  padding: 10px;
+}
+.main > .welcome > p {
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #bb423f;
+}
+.main > .welcome > p:nth-child(2),
+.main > .welcome > img,
+.signin {
+  display: none;
+}
+.main > div > form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+.main > div > form > .type > p {
+  font-size: 20px;
+  color: #bb423f;
+}
+.main > div > .choice {
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+}
+.main > .form-placing > .choice > button {
+  /* flex: 1; */
+  border: none;
+  background-color: #fff;
+  color: #bb423f;
+  flex-basis: 40%;
+  font-size: 20px;
+  transition: 0.2s transform;
+  padding: 10px;
+  border-radius: 20px;
+}
+.main > .form-placing > .choice > .button-notactive {
+  background-color: #bb423f;
+  color: #fff;
+  transform: scale(0.75);
+  transition: 0.2s transform;
+}
+.main > div > form > div {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.main > div > form > div > input {
+  background-color: #cacaca;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+}
+.main > div > form > div > select {
+  background-color: #cacaca;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+.main > div > form > div > input:focus,
+.main > div > form > div > select:focus {
+  box-shadow: 0 0 0 5px rgba(255, 81, 0, 0.3);
+}
+.main > div > form > div > button {
+  background-color: transparent;
+  border: 3px solid #bb423f;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #bb423f;
+}
+.main > div > form > div > button:active,
+.main > div > form > div > button:hover {
+  background-color: #bb423f;
+  transition: 0.1s all;
+  color: #fff;
+  font-size: 15px;
+}
+.main > div > form > .terms {
+  display: flex;
+  flex-direction: row;
+}
+@media only screen and (min-width: 640px) and(max-width:1024px) {
+}
+@media only screen and (min-width: 1024px) {
+  .main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+  }
+  .main > .welcome > img {
+    display: block !important;
+    width: 100%;
+  }
+  .main > .welcome > p:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 30px;
+  }
+  .main > .welcome > p:nth-child(3) > span:nth-child(1) {
+    font-size: 15px !important;
+    background-color: #bb423f;
+    padding: 10px;
+    color: #fff;
+  }
+  .main > .welcome > p:nth-child(3) > span:nth-child(2) {
+    font-size: 27px;
+  }
+  .main > .welcome > p:nth-child(2) {
+    display: block;
+    font-size: 25px !important;
+    margin-top: 20px;
+  }
+  .main > .welcome {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px;
+  }
+  .main > .welcome > .signin {
+    width: 100%;
+    display: flex;
+    background-color: #bb423f;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+  }
+  .main > .welcome > .signin > p {
+    flex: 1;
+    text-transform: capitalize;
+  }
+  .main > .welcome > .signin > button {
+    border: 2px solid #fff;
+    background-color: transparent;
+    flex: 1;
+    color: #fff;
+    padding: 10px;
+    border-radius: 30px;
+    text-transform: capitalize;
+    font-size: 15px;
+  }
+  .main > .welcome > .signin > button:hover {
+    background-color: #fff;
+    color: #bb423f;
+  }
+  .main > .form-placing {
+    flex: 2;
+  }
+  .main > .form-placing > form {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+  .main > .form-placing > form > div {
+    flex: 1;
+    flex-basis: 50%;
+  }
+  .main > .form-placing > form > .terms {
+    flex-basis: 100% !important;
+  }
+  .main > div > form > .type {
+    flex-basis: 100%;
+  }
+}
